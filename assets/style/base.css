@@ -5,7 +5,7 @@
  body{background-color: #E1E1E1; font-family: 'Ovo', serif; margin: 0;}
 
  /* Links */
- a, a:link, a:visited{color: #000; text-decoration: none;}
+ a, a:visited{color: #000; text-decoration: none;}
 
 /* Comp */
 h3, p{margin: 4px 0 4px 0;}
@@ -19,6 +19,15 @@ h3, p{margin: 4px 0 4px 0;}
 .box-comp{border-left:3px solid  #993366;} .box-saudavel{border-left:3px solid  #0F7403;}
 .box-petiscos{border-left:3px solid  #E74808;} .box-receitas{border-left:3px solid  #B00007;}
 .box-confeitaria{border-left:3px solid  #E30088;} .box-mais{border-left:3px solid  #666;}
+
+/* Transitions */
+.menu-comp > a, .transition{
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+-ms-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
 
  /* Font ======================================================================================== */
  @font-face {
@@ -52,31 +61,53 @@ h3, p{margin: 4px 0 4px 0;}
 	background-image: url("../img/logo.png");
 	background-repeat: no-repeat;	
 	background-size: 100%;
-	display: border-left: ;
+	display: block;
 	height: 103px;
 	margin-bottom: 10px;
 	position: absolute;
 	top: 15px;
 	width: 268px;
 }
+/* Menu ========================================================================================= */
 .menu{
 	font-size: 1.3em;
 	position: relative;
-	top: 150px;
-	width: 611px;
+	top: 145px;
+	width: 640px;
 }
-.menu ul{margin: 0; padding: 0; list-style: none;}
-.menu li{display: inline-block; margin-right: 15px;}
-.menu-comp, .menu-saudavel, .menu-petiscos, .menu-receitas, .menu-confeitaria, .menu-mais{
--webkit-transition: all .5s ease-in-out;
--moz-transition: all .5s ease-in-out;
--o-transition: all .5s ease-in-out;
--ms-transition: all .5s ease-in-out;
-transition: all .5s ease-in-out;
+.menu ul{margin: 0; margin-bottom: 5px; padding: 0; list-style: none;}
+.menu li{display: inline-block; margin-right: 15px; padding: 5px;}
+
+.menu-comp:hover > a{color: #FFF;} .menu-saudavel:hover{background-color: #119104;}
+.menu-petiscos:hover{background-color: #E74808;} .menu-receitas:hover{background-color: #B00007;}
+.menu-confeitaria:hover{background-color: #E30088;} .menu-mais:hover{background-color: #666;}
+
+/* Search ======================================================================================= */
+.search{
+	height: 30px;
+	position: absolute;
+	right: 0;
+	top: 48px;
+	width: 328px;
 }
-.menu-comp:hover{color: #993366;} .menu-saudavel:hover{color: #119104;}
-.menu-petiscos:hover{color: #E74808;} .menu-receitas:hover{color: #B00007;}
-.menu-confeitaria:hover{color: #E30088;} .menu-mais:hover{color: #666;}
+.search>input[type="text"]{
+	background-color: #E4E4E4;
+	border: 0;
+	height: 31px;
+	outline: none;
+	padding-left: 10px;
+	width: 235px;
+}
+.search>input[type="submit"]{
+	background-color: #993366;
+	border: 0;
+	color: #FFF;
+	height: 33px;
+	width: 75px;
+}
+.search>input[type="submit"]:hover{
+	background-color: #BD4083;
+}
 
 /* Content ====================================================================================== */
 .content{
@@ -86,4 +117,14 @@ transition: all .5s ease-in-out;
 	padding-top: 15px;
 	position: relative;
 	width: 1250px;
+}
+
+/* Footer ======================================================================================= */
+.footer{
+	background-color: #333;
+	display: block;
+	height: 300px;
+	margin-top: 30px;
+	position: relative;
+	width: 100%;
 }

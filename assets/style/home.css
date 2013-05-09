@@ -3,7 +3,7 @@
  =================================================================================================*/
 .box{
 	background-color: #FFF;
-	display: block;
+	display: block-table;
 	margin-bottom: 15px;
 	padding: 8px;
 	position: relative;
